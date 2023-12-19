@@ -48,7 +48,7 @@ function EditUser() {
     onSubmit: async (values) => {
       try {
         await axios.put(
-          `http://localhost:3005/user/${params._id}`,
+          `https://b52-nodejs.onrender.com/user/${params._id}`,
           values
         );
         alert("Data Updated");
@@ -60,7 +60,7 @@ function EditUser() {
   });
 
   let getEmpData = async () => {
-    const empData = await axios.get(`http://localhost:3005/user/${params._id}`);
+    const empData = await axios.get(`https://b52-nodejs.onrender.com/user/${params._id}`);
     setEmployee(empData.data);
     delete empData.data._id;
     delete empData.data.createdAt;

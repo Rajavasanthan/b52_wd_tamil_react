@@ -7,7 +7,7 @@ function UserList() {
   async function getData() {
     try {
       const employeList = await axios.get(
-        "http://localhost:3005/users"
+        "https://b52-nodejs.onrender.com/users"
       );
       setEmployees([...employeList.data]);
     } catch (error) {
@@ -20,7 +20,7 @@ function UserList() {
 
   let handleDelete = async (id) => {
     try {
-      await axios.delete(`http://localhost:3005/user/${id}`);
+      await axios.delete(`https://b52-nodejs.onrender.com/user/${id}`);
       getData();
       alert("Data Deleted");
     } catch (error) {

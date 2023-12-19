@@ -43,7 +43,7 @@ function CreateUser() {
     },
     onSubmit: async (values) => {
       try {
-        await axios.post("http://localhost:3005/user",values)
+        await axios.post("https://b52-nodejs.onrender.com/user",values)
         alert("Data Posted")
       } catch (error) {
         console.error(error)

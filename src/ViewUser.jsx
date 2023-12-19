@@ -8,9 +8,8 @@ function ViewUser() {
   let fetchData = async () => {
     try {
       let employee = await axios.get(
-        `http://localhost:3005/user/${params.id}`
+        `https://b52-nodejs.onrender.com/user/${params.id}`
       );
-      
       setEmployeeDetails(employee.data)
     } catch (error) {
       setError("Something went wrong")
